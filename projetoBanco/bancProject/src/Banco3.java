@@ -1,13 +1,36 @@
 //Escreva um programa chamado CaixaChatBot.
 
+import banco.entidades.Agencia;
 import banco.entidades.ContaSimples;
+
+import java.util.Scanner;
+
 public class Banco3 {
     public static void main(String[] args) {
         //1. para criar uma nova conta (que deve ser salva na agência)
-        ContaSimples umaConta = new ContaSimples("Mateus", "700293444-92");
-
         //2. para localizar uma conta já existente através de seu número
+        Scanner sc = new Scanner(System.in);
+        System.out.printf(
+                "=========Escolha uma das opções=============%n" +
+                "( 1 ).Para criar uma conta.%n" +
+                "( 2 ).Para buscar uma conta pelo número.%n" +
+                "============================================%n");
 
+        int escolha;
+        escolha = sc.nextInt();
+        switch (escolha){
+            case 1:
+                System.out.printf("%n=========Abrindo uma conta=============%n");
+                String nome, cpf;
+                System.out.print("Digite o nome completo: ");
+                nome = sc.nextLine();
+                System.out.printf("%nDigite o CPF: ");
+                cpf = sc.nextLine();
+                ContaSimples umaConta = new ContaSimples(nome, cpf);
+                break;
+            case 2:
+
+        }
 
         //Com a conta identificada o menu de opções do bot deve mudar o menu para as seguintes opções:
         //1. Depositar
@@ -29,4 +52,7 @@ public class Banco3 {
           Lembre de escrever um código fácil de entender e que segue as regras de estilo de programação Java.*/
 
     }
+}
+private static abrirUmaConta (){
+
 }
