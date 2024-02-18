@@ -11,7 +11,7 @@ public class CaixaChatBoat {
         Scanner scanner = new Scanner(System.in);
         boolean sair = false;
         while (!sair) {
-            exibirMenuInicial();
+            menuInicial();
             int escolha = scanner.nextInt();
             scanner.nextLine();
             switch (escolha) {
@@ -33,7 +33,7 @@ public class CaixaChatBoat {
 
     public static void exibirMenuConta(Conta conta, Scanner scanner) {
         while (true) {
-            exibirMenuContas();
+            menuConta();
             int escolha = scanner.nextInt();
             scanner.nextLine();
             switch (escolha) {
@@ -67,11 +67,7 @@ public class CaixaChatBoat {
         }
     }
 
-    public static String lerEntradaDoUsuario(Scanner scanner) {
-        return scanner.nextLine();
-    }
-
-    public static void exibirMenuInicial() {
+    public static void menuInicial() {
         System.out.println("========= Escolha uma das opções =========");
         System.out.println("(1). Para criar uma conta.");
         System.out.println("(2). Para buscar uma conta pelo número.");
@@ -80,7 +76,7 @@ public class CaixaChatBoat {
         System.out.print("Escolha uma opção: ");
     }
 
-    public static void exibirMenuContas() {
+    public static void menuConta() {
         System.out.println("========= Menu da conta =========");
         System.out.println("1. Depositar");
         System.out.println("2. Sacar");
@@ -95,13 +91,14 @@ public class CaixaChatBoat {
     public static void criarNovaConta(Scanner scanner) {
         String nome, cpf;
         System.out.print("Digite o nome completo: ");
-        nome = lerEntradaDoUsuario(scanner);
+        nome = scanner.nextLine();
+        scanner.nextLine();
         System.out.print("Digite o CPF: ");
-        cpf = lerEntradaDoUsuario(scanner);
+        cpf = scanner.nextLine();
+        scanner.nextLine();
         System.out.println();
         ContaSimples umaConta = new ContaSimples(nome, cpf);
         Agencia.addConta(umaConta);
-
         System.out.println("Conta adicionada! Seu número de conta é " + umaConta.getNúmero());
     }
 
@@ -136,18 +133,18 @@ public class CaixaChatBoat {
         System.out.println("Informe o dia de abertura do extrato:");
         int diaI = scanner.nextInt();
         System.out.println("Informe o mês de abertura do extrato:");
-        int mesI = scanner.nextInt();
+        int mesInicial = scanner.nextInt();
         System.out.println("Informe o ano de abertura do extrato:");
-        int anoI = scanner.nextInt();
+        int anoInicial = scanner.nextInt();
         System.out.println("Informe o dia de fechamento do extrato:");
-        int diaF = scanner.nextInt();
+        int diaFinal = scanner.nextInt();
         System.out.println("Informe o mês de fechamento do extrato:");
-        int mesF = scanner.nextInt();
+        int mesFinal = scanner.nextInt();
         System.out.println("Informe o ano de fechamento do extrato:");
-        int anoF = scanner.nextInt();
-        Data dataInit = new Data(diaI, mesI, anoI);
-        Data dataFim = new Data(diaF, mesF, anoF);
-        Extrato extrato = conta.criarExtrato(dataInit, dataFim);
+        int anoFinal = scanner.nextInt();
+        Data dataInicio = new Data(diaI, mesInicial, anoInicial);
+        Data dataFim = new Data(diaFinal, mesFinal, anoFinal);
+        Extrato extrato = conta.criarExtrato(dataInicio, dataFim);
         System.out.println(extrato.formatar());
 
     }
