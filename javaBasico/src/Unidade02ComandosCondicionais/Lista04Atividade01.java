@@ -1,9 +1,9 @@
-package Unidade02_Comandos_Condicionais;
+package Unidade02ComandosCondicionais;
 
 import java.util.Scanner;
 
 public class Lista04Atividade01 {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         /*
         1. Na Copa do Mundo, os times são organizados em grupos que disputam as vagas para a
         próxima fase. Para definir qual time será o líder do grupo, primeiro analisa-se a quantidade de
@@ -30,7 +30,7 @@ public class Lista04Atividade01 {
         saldoGolsTime2 = teclado.nextInt();
         golsFeitosTime2 = teclado.nextInt();
 
-        if (pontosTime1 > pontosTime2){
+        if (pontosTime1 > pontosTime2) {
 
         }
 

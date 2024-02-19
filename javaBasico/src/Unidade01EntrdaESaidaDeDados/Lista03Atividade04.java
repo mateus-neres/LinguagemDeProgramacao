@@ -1,4 +1,4 @@
-package Unidade01_EntrdaESaidaDeDados;
+package Unidade01EntrdaESaidaDeDados;
 
 import java.util.Scanner;
 
@@ -25,7 +25,7 @@ public class Lista03Atividade04 {
         revistasParaCadaAmigo = quantidadeDeRevistas / quantidadeDeAmigos;
         resvistasRestantes = quantidadeDeRevistas % quantidadeDeAmigos;
 
-        System.out.printf("Cada amigo receberá %.0f revistas e sobrarão %.0f.",revistasParaCadaAmigo, resvistasRestantes);
+        System.out.printf("Cada amigo receberá %.0f revistas e sobrarão %.0f.", revistasParaCadaAmigo, resvistasRestantes);
 
     }
 }

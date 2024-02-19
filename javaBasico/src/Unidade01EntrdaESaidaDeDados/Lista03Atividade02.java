@@ -1,4 +1,4 @@
-package Unidade01_EntrdaESaidaDeDados;
+package Unidade01EntrdaESaidaDeDados;
 
 import java.util.Scanner;
 
@@ -23,7 +23,7 @@ public class Lista03Atividade02 {
 
         totalDeProcessosAnalisados = (expedienteDiario * horaEmMinutos) / tempoMedioparaAnaliseDeProcessos;
 
-        System.out.printf("Betina analisa %d processos em um dia.",totalDeProcessosAnalisados);
+        System.out.printf("Betina analisa %d processos em um dia.", totalDeProcessosAnalisados);
 
     }
 }

@@ -1,4 +1,4 @@
-package Unidade02_Comandos_Condicionais;
+package Unidade02ComandosCondicionais;
 
 import java.util.Scanner;
 
@@ -16,12 +16,13 @@ public class Lista02Atividade02 {
         int numero;
 
         System.out.println("Digite um número inteiro: ");
-        numero = teclado.nextInt();;
+        numero = teclado.nextInt();
+        ;
 
-        if (numero % 2 == 0){
+        if (numero % 2 == 0) {
             System.out.printf("O número %d é par.", numero);
         } else {
-            System.out.printf("O número %d é impa.",numero);
+            System.out.printf("O número %d é impa.", numero);
         }
     }
 }

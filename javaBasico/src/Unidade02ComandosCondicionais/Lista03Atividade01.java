@@ -1,4 +1,4 @@
-package Unidade02_Comandos_Condicionais;
+package Unidade02ComandosCondicionais;
 
 import java.util.Scanner;
 
@@ -26,16 +26,16 @@ public class Lista03Atividade01 {
         System.out.println("Digite o material do presente: ");
         material = teclado.nextLine().toUpperCase();
 
-        if (tipo.equals("RELOGIO")){
-            if(material.equals("COURO")){
+        if (tipo.equals("RELOGIO")) {
+            if (material.equals("COURO")) {
                 System.out.println(relogioDeCouro + " ganha chaveiro");
-            }else if(material.equals("METAL")){
+            } else if (material.equals("METAL")) {
                 System.out.println(relogioDeMetal + " ganha chaveiro");
             }
-        }else if (tipo.equals("BOLSA")){
-            if(material.equals("COURO")){
+        } else if (tipo.equals("BOLSA")) {
+            if (material.equals("COURO")) {
                 System.out.println(bolsaDeCouro);
-            }else if(material.equals("TECIDO")){
+            } else if (material.equals("TECIDO")) {
                 System.out.println(bolsaDetecido);
             }
         }

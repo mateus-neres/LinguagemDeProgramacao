@@ -1,4 +1,4 @@
-package Unidade02_Comandos_Condicionais;
+package Unidade02ComandosCondicionais;
 
 import java.util.Scanner;
 
@@ -31,7 +31,7 @@ public class Lista03Atividade03 {
         System.out.println("Digite o valor que deseja abastecer: ");
         valorAbastecido = teclado.nextDouble();
 
-        if (tipoCombustivel.equals("GASOLINA")){
+        if (tipoCombustivel.equals("GASOLINA")) {
             litrosAbastecido = valorAbastecido / gasolina;
         } else if (tipoCombustivel.equals("ETANOL")) {
             litrosAbastecido = valorAbastecido / etanol;
@@ -39,10 +39,10 @@ public class Lista03Atividade03 {
             litrosAbastecido = valorAbastecido / diesel;
         }
 
-        if (litrosAbastecido > 30){
+        if (litrosAbastecido > 30) {
             System.out.printf("Litros %.2f%n", litrosAbastecido);
             System.out.println("Ganhou troca de óleo.");
-        }else {
+        } else {
             System.out.printf("Litros %.2f%n", litrosAbastecido);
             System.out.println("Não ganhou troca de óleo.");
         }

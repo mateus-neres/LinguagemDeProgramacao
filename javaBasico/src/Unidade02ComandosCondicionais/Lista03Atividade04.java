@@ -1,9 +1,9 @@
-package Unidade02_Comandos_Condicionais;
+package Unidade02ComandosCondicionais;
 
 import java.util.Scanner;
 
 public class Lista03Atividade04 {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         /*
         4. Uma locadora de veículos cobra seus clientes por eventuais atrasos na devolução dos carros alugados.
         Caso o atraso seja inferior a duas horas, será cobrada uma multa de R$ 30. Para atrasos de até três
@@ -24,7 +24,7 @@ public class Lista03Atividade04 {
         System.out.println("Digite o tempo de atraso");
         tempoDeAtraso = teclado.nextInt();
 
-        if (tempoDeAtraso > 0 && tempoDeAtraso < 2){
+        if (tempoDeAtraso > 0 && tempoDeAtraso < 2) {
             multa = 30;
         } else if (tempoDeAtraso >= 2 && tempoDeAtraso <= 3) {
             multa = 80;

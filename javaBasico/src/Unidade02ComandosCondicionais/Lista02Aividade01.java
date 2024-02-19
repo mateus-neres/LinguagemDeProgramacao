@@ -1,4 +1,4 @@
-package Unidade02_Comandos_Condicionais;
+package Unidade02ComandosCondicionais;
 
 import java.util.Scanner;
 
@@ -16,13 +16,14 @@ public class Lista02Aividade01 {
         int numero;
 
         System.out.println("Digite um número inteiro: ");
-        numero = teclado.nextInt();;
+        numero = teclado.nextInt();
+        ;
 
-        if (numero > 0){
+        if (numero > 0) {
             System.out.printf("O número %d é positivo.", numero);
         } else if (numero < 0) {
-            System.out.printf("O número %d é negativo.",numero);
-        }else{
+            System.out.printf("O número %d é negativo.", numero);
+        } else {
             System.out.printf("O número %d é neutro.", numero);
         }
     }

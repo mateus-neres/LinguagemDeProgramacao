@@ -1,4 +1,4 @@
-package Unidade01_EntrdaESaidaDeDados;
+package Unidade01EntrdaESaidaDeDados;
 
 import java.util.Scanner;
 
@@ -28,7 +28,7 @@ public class Lista02Atividade03 {
         quantidadeDEBeijinho = teclado.nextInt();
 
         totalGasto = (quantidadeDeBrigadeiro * valorBrigadeiro) + (quantidadeDEBeijinho * valorBeijinho);
-        docinhorPorcrianca = (int)(quantidadeDeBrigadeiro + quantidadeDEBeijinho) / quantidadeDeCrianca;
+        docinhorPorcrianca = (int) (quantidadeDeBrigadeiro + quantidadeDEBeijinho) / quantidadeDeCrianca;
 
         System.out.printf("Serão gastos R$ %.2f e %d de docinhos para cada criança", totalGasto, docinhorPorcrianca);
     }

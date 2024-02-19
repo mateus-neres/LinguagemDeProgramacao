@@ -1,4 +1,4 @@
-package Unidade02_Comandos_Condicionais;
+package Unidade02ComandosCondicionais;
 
 import java.util.Scanner;
 
@@ -27,7 +27,7 @@ public class Lista03Atividade02 {
         String tipoDeServico;
         int quantidadeDeXeroxOuEncadernacao;
         String tipoDeXerox = "";
-        double valorASerpago=0;
+        double valorASerpago = 0;
 
         System.out.println("Digite o tipo de serviço que deseja realizar: ");
         tipoDeServico = teclado.nextLine().toUpperCase();
@@ -42,14 +42,14 @@ public class Lista03Atividade02 {
         if (tipoDeXerox.equals("PB")) {
             valorASerpago = xeroxPretoBranco * quantidadeDeXeroxOuEncadernacao;
         } else if (tipoDeXerox.equals("COLORIDA")) {
-                valorASerpago = xeroxColorida * quantidadeDeXeroxOuEncadernacao;
-        }else if (tipoDeServico.equals("ENCADERNAÇÃO")){
-            if (quantidadeDeXeroxOuEncadernacao < 100){
+            valorASerpago = xeroxColorida * quantidadeDeXeroxOuEncadernacao;
+        } else if (tipoDeServico.equals("ENCADERNAÇÃO")) {
+            if (quantidadeDeXeroxOuEncadernacao < 100) {
                 valorASerpago = encaderncaoEmAte100Folhas;
             } else if (quantidadeDeXeroxOuEncadernacao > 100) {
                 valorASerpago = encadernacaoEmMaisDe100Folhas;
             }
         }
-        System.out.printf("O valor a ser pago e de R$%.2f",valorASerpago);
+        System.out.printf("O valor a ser pago e de R$%.2f", valorASerpago);
     }
 }

@@ -1,4 +1,4 @@
-package Unidade01_EntrdaESaidaDeDados;
+package Unidade01EntrdaESaidaDeDados;
 
 import java.util.Scanner;
 

@@ -1,9 +1,9 @@
-package Unidade02_Comandos_Condicionais;
+package Unidade02ComandosCondicionais;
 
 import java.util.Scanner;
 
 public class Lista03Atividade05 {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         /*
         5. Helena trabalha na bilheteria de um cinema, e vende ingressos e lanches. Os ingressos para filmes em
         2D custam R$ 8,50, e para os filmes em 3D custam R$ 14,50. Caso queira adquirir um combo simples
@@ -20,14 +20,14 @@ public class Lista03Atividade05 {
         double comboCompleto = 12;
         String tipoDeFilme, lanche;
         double valorASerPago;
-        
+
         System.out.println("Digite o tipo de filme que deseja: ");
         tipoDeFilme = teclado.nextLine().toUpperCase();
         System.out.println("Digite se deseja lanche simples, completo ou não: ");
         lanche = teclado.nextLine().toUpperCase();
-        
-        if (tipoDeFilme.equals("2D")){
-            if (lanche.equals("NÃO")){
+
+        if (tipoDeFilme.equals("2D")) {
+            if (lanche.equals("NÃO")) {
                 valorASerPago = ingressos2d;
             } else if (lanche.equals("COMBO SIMPLES")) {
                 valorASerPago = ingressos2d + comboSimples;
@@ -35,7 +35,7 @@ public class Lista03Atividade05 {
                 valorASerPago = ingressos2d + comboCompleto;
             }
         } else {
-            if (lanche.equals("NÃO")){
+            if (lanche.equals("NÃO")) {
                 valorASerPago = ingressos3d;
             } else if (lanche.equals("COMBO SIMPLES")) {
                 valorASerPago = ingressos3d + comboSimples;
@@ -43,6 +43,6 @@ public class Lista03Atividade05 {
                 valorASerPago = ingressos3d + comboCompleto;
             }
         }
-        System.out.printf("%.2f",valorASerPago);
+        System.out.printf("%.2f", valorASerPago);
     }
 }

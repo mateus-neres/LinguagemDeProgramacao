@@ -1,4 +1,4 @@
-package Unidade01_EntrdaESaidaDeDados;
+package Unidade01EntrdaESaidaDeDados;
 
 import java.util.Scanner;
 
@@ -19,7 +19,7 @@ public class Lista02Atividade01 {
         quantidadeDelaranjas = teclado.nextInt();
 
         custoTotal = quantidadeDelaranjas * valorUnitarioLaranja;
-        System.out.printf("O valor de %d é de R$ %.2f", quantidadeDelaranjas, custoTotal );
+        System.out.printf("O valor de %d é de R$ %.2f", quantidadeDelaranjas, custoTotal);
 
     }
 }
