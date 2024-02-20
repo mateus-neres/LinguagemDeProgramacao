@@ -15,24 +15,49 @@ public class Lista04Atividade01 {
         maiúsculas).
          */
 
-        Scanner teclado = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         String time1, time2;
         int pontosTime1, saldoGolsTime1, golsFeitosTime1, pontosTime2, saldoGolsTime2, golsFeitosTime2;
 
         System.out.println("Digite o nome do time1: ");
-        time1 = teclado.nextLine().toUpperCase();
-        pontosTime1 = teclado.nextInt();
-        saldoGolsTime1 = teclado.nextInt();
-        golsFeitosTime1 = teclado.nextInt();
-        System.out.println("Digite o nome do time2: ");
-        time2 = teclado.nextLine().toUpperCase();
-        pontosTime2 = teclado.nextInt();
-        saldoGolsTime2 = teclado.nextInt();
-        golsFeitosTime2 = teclado.nextInt();
+        time1 = scanner.nextLine().toUpperCase();
+        System.out.println("Digite os pontos do time1: ");
+        pontosTime1 = scanner.nextInt();
+        System.out.println("Digite o saldo de gols do time1: ");
+        saldoGolsTime1 = scanner.nextInt();
+        System.out.println("Digite os gols do time1: ");
+        golsFeitosTime1 = scanner.nextInt();
+
+        scanner.nextLine(); // Consumir linha
+
+        System.out.printf("%nDigite o nome do time2: %n");
+        time2 = scanner.nextLine().toUpperCase();
+        System.out.println("Digite os pontos do time2: ");
+        pontosTime2 = scanner.nextInt();
+        System.out.println("Digite o saldo de gols do time2: ");
+        saldoGolsTime2 = scanner.nextInt();
+        System.out.println("Digite os gols do time2: ");
+        golsFeitosTime2 = scanner.nextInt();
 
         if (pontosTime1 > pontosTime2) {
-
+            System.out.println(time1.toLowerCase());
+        } if (pontosTime1 < pontosTime2) {
+            System.out.println(time2.toLowerCase());
+        } else if (pontosTime1 == pontosTime2) {
+            if (saldoGolsTime1 > saldoGolsTime2) {
+                System.out.println(time1.toLowerCase());
+            } if (saldoGolsTime1 < saldoGolsTime2) {
+                System.out.println(time2.toLowerCase());
+            } else if (saldoGolsTime1 == saldoGolsTime2) {
+                if (golsFeitosTime1 > golsFeitosTime2) {
+                    System.out.println(time1.toLowerCase());
+                } if (golsFeitosTime1 < golsFeitosTime2) {
+                    System.out.println(time2.toLowerCase());
+                } else if (golsFeitosTime1 == golsFeitosTime2){
+                    System.out.println("EMPATE");
+                }
+            }
         }
-
+        scanner.close();
     }
 }
