@@ -3,8 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/LinguagemDeProgramacao.iml" filepath="$PROJECT_DIR$/.idea/LinguagemDeProgramacao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/blocoDeNotas/blocoDeNotas.iml" filepath="$PROJECT_DIR$/blocoDeNotas/blocoDeNotas.iml" />
       <module fileurl="file://$PROJECT_DIR$/desafiosBeecrow/desafiosBeecrow.iml" filepath="$PROJECT_DIR$/desafiosBeecrow/desafiosBeecrow.iml" />
-      <module fileurl="file://$PROJECT_DIR$/estoque/estoque.iml" filepath="$PROJECT_DIR$/estoque/estoque.iml" />
       <module fileurl="file://$PROJECT_DIR$/introducaoEmJava/introducaoEmJava.iml" filepath="$PROJECT_DIR$/introducaoEmJava/introducaoEmJava.iml" />
       <module fileurl="file://$PROJECT_DIR$/javaBasico/javaBasico.iml" filepath="$PROJECT_DIR$/javaBasico/javaBasico.iml" />
       <module fileurl="file://$PROJECT_DIR$/projetoBanco/projetoBanco.iml" filepath="$PROJECT_DIR$/projetoBanco/projetoBanco.iml" />
