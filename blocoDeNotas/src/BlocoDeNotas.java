@@ -10,13 +10,13 @@ public class BlocoDeNotas {
 
     public void adicionarAnotacao (String texto) {
         try {
-            if (!texto.isEmpty()) {
+            if (!texto.equals(null)) {
                 Anotacao novaAnotacao = new Anotacao(texto);
                 System.out.println("Adição bem sucedida");
             } else {
                 throw new IllegalArgumentException("Anotação não adicionada, texto está vazio");
             }
-        }catch (IllegalArgumentException e) {
+        }catch (NullPointerException e) {
             System.out.println("Erro de anotação: " + e.getMessage());
         }
     }
