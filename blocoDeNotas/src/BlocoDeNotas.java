@@ -3,13 +3,22 @@ import java.util.ArrayList;
 public class BlocoDeNotas {
     private List<Anotacao> anotacoes;
 
-    public BlocoDeNotas () {
+    public void colecaoAnotacoes () {
         this.anotacoes = new ArrayList<>();
     }
 
+
     public void adicionarAnotacao (String texto) {
-        Anotacao novaAnotacao = new Anotacao(texto);
-        anotacoes.add(novaAnotacao);
+        try {
+            if (!texto.isEmpty()) {
+                Anotacao novaAnotacao = new Anotacao(texto);
+                System.out.println("Adição bem sucedida");
+            } else {
+                throw new IllegalArgumentException("Anotação não adicionada, texto está vazio");
+            }
+        }catch (IllegalArgumentException e) {
+            System.out.println("Erro de anotação: " + e.getMessage());
+        }
     }
 
     public void editarAnotacao (int id, String novoTexto) {
@@ -40,7 +49,7 @@ public class BlocoDeNotas {
         return resultado;
     }
 
-    public List<Anotacao> listaAnotacao () {
+    public List<Anotacao> listaAnotacaoBlocoDeNotas () {
         List<Anotacao> resultado = new ArrayList<>();
         for (Anotacao anotacao : anotacoes) {
             if (!anotacao.isDeletada()) {
