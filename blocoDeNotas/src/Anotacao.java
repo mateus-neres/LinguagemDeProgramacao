@@ -2,7 +2,7 @@ import java.time.LocalDate;
 import java.util.Objects;
 
 public class Anotacao {
-    private static int contador;
+    private static int contador = 1;
     private final int id;
     private String texto;
     private final LocalDate dataCriacao;
@@ -27,7 +27,9 @@ public class Anotacao {
     }
 
     public void setTexto(String novoTexto) {
-        Objects.requireNonNull(novoTexto, "O novo texto não pode ser nulo");
+        if ((novoTexto == null) || novoTexto.isEmpty() || (deletada)) {
+            throw new IllegalArgumentException("O novo texto não pode ser vazio ou está excluido!");
+        }
         this.texto = novoTexto;
     }
 

@@ -18,13 +18,17 @@ public class BlocoDeNotas {
     }
 
     public void editarAnotacao(int id, String novoTexto) {
-        for (Anotacao anotacao : anotacoes) {
-            if (anotacao.getId() == id && !anotacao.isDeletada()) {
-                anotacao.setTexto(novoTexto);
-                return;
+        try {
+            for (Anotacao anotacao : anotacoes) {
+                if (anotacao.getId() == id && !anotacao.isDeletada()) {
+                    anotacao.setTexto(novoTexto);
+                    return;
+                }
             }
+            System.out.println("Anotação não encontrada ou já deletada!");
+        } catch (IllegalArgumentException e) {
+            System.out.println("Error ao editar anotação " + e.getMessage());
         }
-        System.out.println("Anotação não encontrada ou já deletada");
     }
 
     public void deletarAnotacao(int id) {

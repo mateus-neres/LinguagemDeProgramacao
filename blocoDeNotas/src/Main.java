@@ -9,11 +9,12 @@ public class Main {
         System.out.println("Lista de Anotações: ");
         imprimirAnotacoes(novoBlocoDeNotas.listaAnotacaoBlocoDeNotas());
 
-        novoBlocoDeNotas.editarAnotacao(1, "Concluído");
+        novoBlocoDeNotas.deletarAnotacao(2);
+
+        novoBlocoDeNotas.editarAnotacao(2, "Concluído");
         System.out.println("\nLista de anotações após edição: ");
         imprimirAnotacoes(novoBlocoDeNotas.listaAnotacaoBlocoDeNotas());
 
-        novoBlocoDeNotas.deletarAnotacao(2);
 
         System.out.println("\nLista após deleção: ");
         imprimirAnotacoes(novoBlocoDeNotas.listaAnotacaoBlocoDeNotas());
