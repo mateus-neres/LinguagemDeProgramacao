@@ -3,7 +3,7 @@ public class Main {
     public static void main(String[] args) {
         BlocoDeNotas novoBlocoDeNotas = new BlocoDeNotas();
 
-        novoBlocoDeNotas.adicionarAnotacao("Ir à academia");
+        novoBlocoDeNotas.adicionarAnotacao("Ir a academia");
         novoBlocoDeNotas.adicionarAnotacao("Ir à escola");
 
         System.out.println("Lista de Anotações: ");

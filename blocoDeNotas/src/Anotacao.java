@@ -9,7 +9,9 @@ public class Anotacao {
     private boolean deletada;
 
     public Anotacao(String texto) {
-        Objects.requireNonNull(texto, "O texto não pode ser nulo");
+        if (texto.equals(null)) {
+            throw new NullPointerException("O texto não pdoe ser vazio!");
+        }
         this.id = contador++;
         this.texto = texto;
         this.dataCriacao = LocalDate.now();

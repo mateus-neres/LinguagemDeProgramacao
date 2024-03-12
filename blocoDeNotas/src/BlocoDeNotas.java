@@ -8,8 +8,13 @@ public class BlocoDeNotas {
     }
 
     public void adicionarAnotacao(String texto) {
-        Anotacao novaAnotacao = new Anotacao(texto);
-        anotacoes.add(novaAnotacao);
+        try {
+            Anotacao novaAnotacao = new Anotacao(texto);
+            anotacoes.add(novaAnotacao);
+        } catch (NullPointerException e) {
+            System.out.println("O texto não pode ser vazio!\n"
+                    + e.getMessage() + "\n");
+        }
     }
 
     public void editarAnotacao(int id, String novoTexto) {
