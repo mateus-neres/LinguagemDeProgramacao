@@ -11,9 +11,8 @@ public class BlocoDeNotas {
         try {
             Anotacao novaAnotacao = new Anotacao(texto);
             anotacoes.add(novaAnotacao);
-        } catch (NullPointerException e) {
-            System.out.println("O texto não pode ser vazio!\n"
-                    + e.getMessage() + "\n");
+        } catch (IllegalArgumentException e) {
+            System.out.println("Erro ao adicionar anotação: " + e.getMessage() + "\n");
         }
     }
 
@@ -27,9 +26,10 @@ public class BlocoDeNotas {
             }
             System.out.println("Anotação não encontrada ou já deletada!");
         } catch (IllegalArgumentException e) {
-            System.out.println("Error ao editar anotação " + e.getMessage());
+            System.out.println("Erro ao editar anotação: " + e.getMessage());
         }
     }
+
 
     public void deletarAnotacao(int id) {
         for (Anotacao anotacao : anotacoes) {

@@ -9,8 +9,8 @@ public class Anotacao {
     private boolean deletada;
 
     public Anotacao(String texto) {
-        if (texto.equals(null)) {
-            throw new NullPointerException("O texto não pdoe ser vazio!");
+        if (texto == null || texto.isEmpty()) {
+            throw new IllegalArgumentException("O texto não pode ser vazio!");
         }
         this.id = contador++;
         this.texto = texto;
@@ -27,8 +27,8 @@ public class Anotacao {
     }
 
     public void setTexto(String novoTexto) {
-        if ((novoTexto == null) || novoTexto.isEmpty() || (deletada)) {
-            throw new IllegalArgumentException("O novo texto não pode ser vazio ou está excluido!");
+        if (novoTexto == null || novoTexto.isEmpty() || deletada) {
+            throw new IllegalArgumentException("O novo texto não pode ser vazio ou está excluído!");
         }
         this.texto = novoTexto;
     }
