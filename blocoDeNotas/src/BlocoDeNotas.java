@@ -3,47 +3,36 @@ import java.util.ArrayList;
 public class BlocoDeNotas {
     private List<Anotacao> anotacoes;
 
-    public void  BlocoDeNotas() {
+    public BlocoDeNotas() {
         this.anotacoes = new ArrayList<>();
     }
 
-    public void adicionarAnotacao (String texto) {
-        try {
-            Anotacao novaAnotacao = new Anotacao(texto);
-            System.out.println("Anotação adicionada");
-        } catch (Exception e) {
-            System.out.println("Anotação não adicionada");
-        }
-
+    public void adicionarAnotacao(String texto) {
+        Anotacao novaAnotacao = new Anotacao(texto);
+        anotacoes.add(novaAnotacao);
     }
 
-    public void editarAnotacao (int id, String novoTexto) {
-        try {
-            for (Anotacao anotacao : anotacoes) {
-                if (anotacao.getId() == id && !anotacao.isDeletada()) {
-                    anotacao.setTexto(novoTexto);
-                    break;
-                }
+    public void editarAnotacao(int id, String novoTexto) {
+        for (Anotacao anotacao : anotacoes) {
+            if (anotacao.getId() == id && !anotacao.isDeletada()) {
+                anotacao.setTexto(novoTexto);
+                return;
             }
-        } catch (RuntimeException e) {
-            System.out.println("Anotação não editada");
         }
+        System.out.println("Anotação não encontrada ou já deletada");
     }
 
-    public void deletarAnotacao (int id) {
-        try {
-            for (Anotacao anotacao : anotacoes) {
-                if (anotacao.getId() == id && !anotacao.isDeletada()) {
-                    anotacao.setDeletada(true);
-                    break;
-                }
+    public void deletarAnotacao(int id) {
+        for (Anotacao anotacao : anotacoes) {
+            if (anotacao.getId() == id && !anotacao.isDeletada()) {
+                anotacao.setDeletada(true);
+                return;
             }
-        } catch (RuntimeException e) {
-            System.out.println("Anotação já deletada");
         }
+        System.out.println("Anotação não encontrada ou já deletada");
     }
 
-    public List<Anotacao> buscarAnotacao (String busca) {
+    public List<Anotacao> buscarAnotacao(String busca) {
         List<Anotacao> resultado = new ArrayList<>();
         for (Anotacao anotacao : anotacoes) {
             if (!anotacao.isDeletada() && anotacao.getTexto().contains(busca)) {
@@ -53,12 +42,11 @@ public class BlocoDeNotas {
         return resultado;
     }
 
-    public List<Anotacao> listaAnotacaoBlocoDeNotas () {
+    public List<Anotacao> listaAnotacaoBlocoDeNotas() {
         List<Anotacao> resultado = new ArrayList<>();
         for (Anotacao anotacao : anotacoes) {
             if (!anotacao.isDeletada()) {
                 resultado.add(anotacao);
-                break;
             }
         }
         return resultado;

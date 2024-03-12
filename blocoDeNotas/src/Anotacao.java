@@ -1,52 +1,45 @@
 import java.time.LocalDate;
+import java.util.Objects;
 
 public class Anotacao {
-    private static int contador = 1;
-    private int id;
+    private static int contador;
+    private final int id;
     private String texto;
-    private LocalDate dataCriacao;
-    private Boolean deletada;
+    private final LocalDate dataCriacao;
+    private boolean deletada;
 
-    public Anotacao (String texto) {
-        if (texto.equals(null)) {
-            throw new IllegalArgumentException("O texto não pode ser vazio");
-        }
+    public Anotacao(String texto) {
+        Objects.requireNonNull(texto, "O texto não pode ser nulo");
         this.id = contador++;
         this.texto = texto;
         this.dataCriacao = LocalDate.now();
         this.deletada = false;
     }
 
-    public int getId(){
+    public int getId() {
         return id;
     }
 
-    public String getTexto(){
+    public String getTexto() {
         return texto;
+    }
+
+    public void setTexto(String novoTexto) {
+        Objects.requireNonNull(novoTexto, "O novo texto não pode ser nulo");
+        this.texto = novoTexto;
     }
 
     public LocalDate getDataCriacao() {
         return dataCriacao;
     }
 
-    public void setTexto (String novoTexto) {
-        if (novoTexto.equals(null)) {
-            throw new IllegalArgumentException("O novo texto não pode ser nulo");
-        }
-        this.texto = novoTexto;
-    }
-
-    public void setDeletada(boolean deletada) {
-        if (deletada != true) {
-            throw new IllegalArgumentException("A anotação já está deletada");
-        }
-        this.deletada = deletada;
-    }
-
     public boolean isDeletada() {
         return deletada;
     }
 
+    public void setDeletada(boolean deletada) {
+        this.deletada = deletada;
+    }
 
     @Override
     public String toString() {
