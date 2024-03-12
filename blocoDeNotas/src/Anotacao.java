@@ -8,6 +8,9 @@ public class Anotacao {
     private Boolean deletada;
 
     public Anotacao (String texto) {
+        if (texto.equals(null)) {
+            throw new IllegalArgumentException("O texto não pode ser vazio");
+        }
         this.id = contador++;
         this.texto = texto;
         this.dataCriacao = LocalDate.now();
@@ -23,6 +26,9 @@ public class Anotacao {
     }
 
     public void setTexto (String novoTexto) {
+        if (novoTexto.equals(null)) {
+            throw new IllegalArgumentException("O novo texto não pode ser nulo");
+        }
         this.texto = novoTexto;
     }
 
@@ -34,6 +40,9 @@ public class Anotacao {
     }
 
     public void setDeletada(boolean deletada) {
+        if (deletada != true) {
+            throw new IllegalArgumentException("A anotação já está deletada");
+        }
         this.deletada = deletada;
     }
 

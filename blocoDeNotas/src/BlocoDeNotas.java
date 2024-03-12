@@ -3,39 +3,44 @@ import java.util.ArrayList;
 public class BlocoDeNotas {
     private List<Anotacao> anotacoes;
 
-    public void colecaoAnotacoes () {
+    public void blocoDeNotas() {
         this.anotacoes = new ArrayList<>();
     }
 
 
     public void adicionarAnotacao (String texto) {
         try {
-            if (!texto.equals(null)) {
-                Anotacao novaAnotacao = new Anotacao(texto);
-                System.out.println("Adição bem sucedida");
-            } else {
-                throw new IllegalArgumentException("Anotação não adicionada, texto está vazio");
-            }
-        }catch (NullPointerException e) {
-            System.out.println("Erro de anotação: " + e.getMessage());
+            Anotacao novaAnotacao = new Anotacao(texto);
+            System.out.println("Anotação adicionada");
+        } catch (Exception e) {
+            System.out.println("Anotação não adicionada");
         }
+
     }
 
     public void editarAnotacao (int id, String novoTexto) {
-        for (Anotacao anotacao : anotacoes) {
-            if (anotacao.getId() == id && !anotacao.isDeletada()) {
-                anotacao.setTexto(novoTexto);
-                break;
+        try {
+            for (Anotacao anotacao : anotacoes) {
+                if (anotacao.getId() == id && !anotacao.isDeletada()) {
+                    anotacao.setTexto(novoTexto);
+                    break;
+                }
             }
+        } catch (RuntimeException e) {
+            System.out.println("Anotação não editada");
         }
     }
 
     public void deletarAnotacao (int id) {
-        for (Anotacao anotacao : anotacoes) {
-            if (anotacao.getId() == id && !anotacao.isDeletada()) {
-                anotacao.setDeletada(true);
-                break;
+        try {
+            for (Anotacao anotacao : anotacoes) {
+                if (anotacao.getId() == id && !anotacao.isDeletada()) {
+                    anotacao.setDeletada(true);
+                    break;
+                }
             }
+        } catch (RuntimeException e) {
+            System.out.println("Anotação já deletada");
         }
     }
 
@@ -54,6 +59,7 @@ public class BlocoDeNotas {
         for (Anotacao anotacao : anotacoes) {
             if (!anotacao.isDeletada()) {
                 resultado.add(anotacao);
+                break;
             }
         }
         return resultado;

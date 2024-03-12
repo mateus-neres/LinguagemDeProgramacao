@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         BlocoDeNotas novoBlocoDeNotas = new BlocoDeNotas();
 
-        novoBlocoDeNotas.adicionarAnotacao("");
+        novoBlocoDeNotas.adicionarAnotacao("ir a academia");
         novoBlocoDeNotas.adicionarAnotacao("ir a escola");
 
         System.out.println("Lista de Anotações: ");
