@@ -3,10 +3,9 @@ import java.util.ArrayList;
 public class BlocoDeNotas {
     private List<Anotacao> anotacoes;
 
-    public void blocoDeNotas() {
+    public void  BlocoDeNotas() {
         this.anotacoes = new ArrayList<>();
     }
-
 
     public void adicionarAnotacao (String texto) {
         try {

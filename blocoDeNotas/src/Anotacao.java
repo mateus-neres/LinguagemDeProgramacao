@@ -25,18 +25,15 @@ public class Anotacao {
         return texto;
     }
 
+    public LocalDate getDataCriacao() {
+        return dataCriacao;
+    }
+
     public void setTexto (String novoTexto) {
         if (novoTexto.equals(null)) {
             throw new IllegalArgumentException("O novo texto não pode ser nulo");
         }
         this.texto = novoTexto;
-    }
-
-    public LocalDate getDataCriacao() {
-        return dataCriacao;
-    }
-    public boolean isDeletada() {
-        return deletada;
     }
 
     public void setDeletada(boolean deletada) {
@@ -45,6 +42,11 @@ public class Anotacao {
         }
         this.deletada = deletada;
     }
+
+    public boolean isDeletada() {
+        return deletada;
+    }
+
 
     @Override
     public String toString() {
