@@ -1,7 +1,7 @@
 import java.util.List;
 import java.util.ArrayList;
 public class BlocoDeNotas {
-    private List<Anotacao> anotacoes;
+    private final List<Anotacao> anotacoes;
 
     public BlocoDeNotas() {
         this.anotacoes = new ArrayList<>();
@@ -24,7 +24,6 @@ public class BlocoDeNotas {
                     return;
                 }
             }
-            System.out.println("Anotação não encontrada ou já deletada!");
         } catch (IllegalArgumentException e) {
             System.out.println("Erro ao editar anotação: " + e.getMessage());
         }
