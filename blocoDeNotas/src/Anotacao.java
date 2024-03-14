@@ -1,5 +1,4 @@
 import java.time.LocalDate;
-import java.util.Objects;
 
 public class Anotacao {
     private static int contador = 1;
