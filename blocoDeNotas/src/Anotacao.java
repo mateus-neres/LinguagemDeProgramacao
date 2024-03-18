@@ -38,7 +38,7 @@ public class Anotacao {
 
     public boolean isDeletada() {
         return deletada;
-    }
+    } // Usar uma lista para armazenar os valores deletados e confirmar se estão deletados.
 
     public void setDeletada(boolean deletada) {
         this.deletada = deletada;
