@@ -21,10 +21,18 @@ public class MainFiguras {
                 case 3:
                     adicionaRetangulo(figuras, sc);
                     break;
+                case 4:
+                    adicionaTrianguloEquilatero(figuras, sc);
+                    break;
             }
-        } while(opcao == 1 || opcao == 2 || opcao == 3);
+        } while(opcao == 1 || opcao == 2 || opcao == 3 || opcao == 4);
 
         descreveFiguras(figuras);
+    }
+
+    private static void adicionaTrianguloEquilatero(RepositorioDeFiguras2D figuras, Scanner sc) {
+        TrianguloEquilatero trianguloEquilatero = new TrianguloEquilatero((double) recebeInteiro(sc,"lado?"));
+        figuras.adicionaFigura(trianguloEquilatero);
     }
 
     private static void adicionaCirculo(RepositorioDeFiguras2D figuras, Scanner sc) {
@@ -60,6 +68,7 @@ public class MainFiguras {
         menu += "1 - para inserir um circulo\n";
         menu += "2 - para inserir um quadrado\n";
         menu += "3 - para inserir um retangulo\n";
+        menu += "4 - para inserir um triangulo equilátero\n";
         menu += "qq outro valor - para sair\n";
         return menu;
     }

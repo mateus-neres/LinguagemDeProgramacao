@@ -1,5 +1,4 @@
 package interfaces.figuras;
-
 import java.util.ArrayList;
 import java.util.List;
 
