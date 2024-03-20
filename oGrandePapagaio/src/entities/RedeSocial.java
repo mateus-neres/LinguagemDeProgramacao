@@ -45,7 +45,7 @@ public class RedeSocial {
         return false;
     }
 
-    private Usuario getUsuario(String nomeUsuario) {
+    public Usuario getUsuario(String nomeUsuario) {
         for (Usuario usuario : usuarios) {
             if (usuario.getNome().equals(nomeUsuario)) {
                 return usuario;
