@@ -6,8 +6,10 @@
       <module fileurl="file://$PROJECT_DIR$/blocoDeNotas/blocoDeNotas.iml" filepath="$PROJECT_DIR$/blocoDeNotas/blocoDeNotas.iml" />
       <module fileurl="file://$PROJECT_DIR$/desafiosBeecrow/desafiosBeecrow.iml" filepath="$PROJECT_DIR$/desafiosBeecrow/desafiosBeecrow.iml" />
       <module fileurl="file://$PROJECT_DIR$/figurasGeometricas/figurasGeometricas.iml" filepath="$PROJECT_DIR$/figurasGeometricas/figurasGeometricas.iml" />
+      <module fileurl="file://$PROJECT_DIR$/interfaces/interfaces.iml" filepath="$PROJECT_DIR$/interfaces/interfaces.iml" />
       <module fileurl="file://$PROJECT_DIR$/introducaoEmJava/introducaoEmJava.iml" filepath="$PROJECT_DIR$/introducaoEmJava/introducaoEmJava.iml" />
       <module fileurl="file://$PROJECT_DIR$/javaBasico/javaBasico.iml" filepath="$PROJECT_DIR$/javaBasico/javaBasico.iml" />
+      <module fileurl="file://$PROJECT_DIR$/miniteste2/miniteste2.iml" filepath="$PROJECT_DIR$/miniteste2/miniteste2.iml" />
       <module fileurl="file://$PROJECT_DIR$/oGrandePapagaio/oGrandePapagaio.iml" filepath="$PROJECT_DIR$/oGrandePapagaio/oGrandePapagaio.iml" />
       <module fileurl="file://$PROJECT_DIR$/projetoBanco/projetoBanco.iml" filepath="$PROJECT_DIR$/projetoBanco/projetoBanco.iml" />
     </modules>
