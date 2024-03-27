@@ -71,5 +71,4 @@ class CartaoDeMetroTest {
     void testGetDescricao() {
         assertEquals("10 viagens de metro.", cartao.getDescricao());
     }
-
 }

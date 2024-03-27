@@ -1,10 +1,16 @@
 public class CartaoDeMetro {
     public static final int VALOR_DE_UMA_VIAGEM = 7;
-    private int qtdViagens;
+    private int qtdViagens = 3;
 
 
     public CartaoDeMetro(int qtdViagens){
-        this.qtdViagens = qtdViagens;
+        try{
+            if (qtdViagens > 0) {
+                this.qtdViagens = qtdViagens;
+            }
+        } catch (IllegalArgumentException e){
+            System.err.println("Quantidade de viagens deve ser maior que zero" + e.getMessage());
+        }
     }
 
     public int getQtdeViagens() {
@@ -15,13 +21,23 @@ public class CartaoDeMetro {
         this.qtdViagens = i;
     }
 
-    public int getPreco() {
-        return qtdViagens * VALOR_DE_UMA_VIAGEM;
+    public double getPreco() {
+
+        if (qtdViagens >= 20 ){
+            return (qtdViagens * VALOR_DE_UMA_VIAGEM) * 0.80;
+        } else {
+            return qtdViagens * VALOR_DE_UMA_VIAGEM;
+        }
     }
 
     public String getDescricao() {
-        return "Cartão de metro";
+        return getQtdeViagens()+ " viagens de metro.";
     }
 
-    
+    @Override
+    public String toString() {
+        return "CartaoDeMetro [" +
+                "qtdeViagens=" + qtdViagens +
+                ']';
+    }
 }
