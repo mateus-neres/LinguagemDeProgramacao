@@ -1,6 +1,8 @@
-import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class BlocoDeNotasTest {
 
@@ -11,7 +13,7 @@ public class BlocoDeNotasTest {
         blocoDeNotas = new BlocoDeNotas();
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     public void adicionarAnotacao_ValidText_AddsAnotacao() {
         blocoDeNotas.adicionarAnotacao("Teste de anotação");
         assertEquals(1, blocoDeNotas.listaAnotacaoBlocoDeNotas().size());

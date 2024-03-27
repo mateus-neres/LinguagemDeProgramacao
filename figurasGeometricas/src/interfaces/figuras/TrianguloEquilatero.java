@@ -1,13 +1,19 @@
 package interfaces.figuras;
-import javax.swing.plaf.PanelUI;
 import java.util.Objects;
 public class TrianguloEquilatero implements Figura2D {
     private Double lado;
 
     public TrianguloEquilatero(Double lado) {
-        this.lado = lado;
+        try {
+            if (lado > 0) {
+                this.lado = lado;
+            } else {
+                throw new RuntimeException("O lado não pode ser menor ou igual a zero");
+            }
+        } catch (RuntimeException e) {
+            throw new RuntimeException(e);
+        }
     }
-
     public Double getLado() {
         return lado;
     }
