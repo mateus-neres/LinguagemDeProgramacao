@@ -5,11 +5,23 @@ public class CartaoDeMetro {
 
     public CartaoDeMetro(int qtdViagens){
         try{
-            if (qtdViagens > 0) {
+            if (qtdViagens < 0) {
+                throw new RuntimeException("Quantidade de viagens deve ser maior que zero");
+            } else {
                 this.qtdViagens = qtdViagens;
             }
         } catch (IllegalArgumentException e){
-            System.err.println("Quantidade de viagens deve ser maior que zero" + e.getMessage());
+            throw new RuntimeException("Quantidade de viagens deve ser maior que zero" + e.getMessage());
+        }
+
+        try{
+            if (qtdViagens == 0) {
+                throw new RuntimeException("Quantidade de viagens deve ser maior que zero");
+            } else {
+                this.qtdViagens = qtdViagens;
+            }
+        } catch (IllegalArgumentException e){
+            throw new RuntimeException("Quantidade de viagens deve ser maior que zero" + e.getMessage());
         }
     }
 
@@ -18,7 +30,9 @@ public class CartaoDeMetro {
     }
 
     public void setQtdeViagens(int i){
+        if (i > 0 ){
         this.qtdViagens = i;
+        }
     }
 
     public double getPreco() {
